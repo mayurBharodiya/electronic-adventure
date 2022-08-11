@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", "Roboto";
+}
+
+h1 {
+    font-size: 58px;
+}
+h2 {
+    font-size: 28px;
+}
+
+.wrapper {
+    background-color: #fcfcfc;
+    // background-color: rgb(176, 176, 240);
+    max-width: 1440px;
+    // padding: 0px 50px;
+    .form_section {
+        width: 60%;
+        // background-color: tomato;
+        display: flex;
+        column-gap: 5px;
+        input {
+            flex: auto;
+            font-size: 18px;
+            padding: 8px 15px;
+        }
+        button {
+            min-width: 100px;
+            font-size: 18px;
+            padding: 8px 15px;
+            background-color: blue;
+            border: none;
+            outline: none;
+            color: white;
+            font-family: "Roboto";
+        }
+    }
+    .desc_section {
+        margin: 60px auto;
+    }
+    .remote_section {
+        // background-color: black;
+        display: flex;
+        position: relative;
+        padding: 0px 20px;
+        .remotes_container {
+            padding: 0px 20px;
+            display: flex;
+            flex-wrap: wrap ;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+            row-gap: 40px;
+            .remote_box {
+                background-color: white;
+                border: 1px solid #afaaaa;
+                border-radius: 8px;
+                width: 320px;
+                // height: 430px;
+                padding: 15px;
+                margin: auto;
+                text-align: center;
+                box-shadow: 1px 0px 15px #afaaaa;
+                font-family: "Poppins";
+                color: grey;
+                img {
+                    height: 230px;
+                    margin-bottom: 20px;
+                }
+                .desc_text {
+                    line-height: 18px;
+                }
+                .price_text {
+                    margin-top: 10px;
+                    color: rgb(103, 103, 103);
+                    font-family: "Poppins";
+                }
+                button {
+                    margin-top: 10px;
+                    font-family: "Roboto";
+                    font-weight: bold;
+                    cursor: pointer;
+                    font-size: 16px;
+                    padding: 8px 15px;
+                    color: white;
+                    background-color: rgb(93, 93, 219);
+                    border: none;
+                    outline: none; 
+                }
+                button:hover {
+                    background-color: skyblue;
+                    transition: all 0.4s;
+                }
+            }
+        }
+        .image_container {
+            min-width: 180px;
+            height: 98vh;
+            // background-color: red;
+            position: sticky;
+            top: 0;
+            img {
+                height: 98vh;
+            }
+        }
+    }    
+}
