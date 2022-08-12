@@ -8,6 +8,23 @@ body {
   font-family: "Poppins", "Roboto";
 }
 
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
 h1 {
   font-size: 58px;
 }
@@ -108,4 +125,43 @@ h2 {
 }
 .wrapper .remote_section .image_container img {
   height: 98vh;
+}
+.wrapper .slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: 100px auto;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper .slider::before, .wrapper .slider::after {
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.wrapper .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.wrapper .slider::before {
+  left: 0;
+  top: 0;
+}
+.wrapper .slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: 3500px;
+}
+.wrapper .slider .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 250px;
+  margin: auto 20px;
 }/*# sourceMappingURL=style.css.map */
