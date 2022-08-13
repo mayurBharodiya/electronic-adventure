@@ -4,137 +4,171 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete el ad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Electronic Adventure main</title>
 </head>
 <body>
     <div class="wrapper">
-        <form class="form_section">
-            <input type="text" placeholder="For your original remote search your TV or remote number here...">
-            <button>Search</button>
-        </form>
-        <div class="desc_section">
-            <h3>We also have full function original universal TV remotes below for most popular brands!</h3>
-            <h2>No Programming, No Codes, It Just Works!</h2>
-            <p>Great if you do not know the exact TV remote you need</p>
+        <div id="Navbar_Container" class="navbar_container">
+            <nav class="navbar">
+                <div class="logo_container"><img class="primary-icon" src="images/EALogo.jpeg" alt="logo_img"></div>
+                    <ul id="Nav_List" class="nav_list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#basket">Basket</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#tracking">Tracking</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#help">Need Help Finding Your Remote?</a></li>
+                    </ul>
+                    <a href="javascript:void(0);" id="Menu_Button" class="menu_button" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </nav>
         </div>
-        <br><br><br>
-        <div class="remote_section">
+        <div id="Main_Container" class="main_container">
+            <h1 class="slider_header_text">we stock new original TV remote controls for all popular brands!</h1>
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="images/brands_logo/hisense_logo.svg" height="40" alt="Hisense" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/lg_logo.jpg" height="100" alt="LG" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/panasonic_logo.svg" height="80" alt="Panasonic" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/roku_logo.svg" height="40" alt="ROKU" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/samsung_logo.svg" height="40" alt="Samsung" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/sanyo_logo.png" height="40" alt="Sanyo" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/toshiba_logo.svg" height="40" alt="Toshiba" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/vizio_logo.png" height="40" alt="Vizio" />
+                    </div>
+                    <div class="slide dynex_slide">
+                        <img src="images/brands_logo/dynex_logo.svg" height="40" class="dynex_logo" alt="Dynex" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/emerson_logo.png" height="40" class="emerson_logo" alt="Emerson" />
+                    </div>
+                    <div class="slide insignia_slide">
+                        <img src="images/brands_logo/Insignia_logo.png" height="40" alt="Insignia" />
+                    </div>
+                    <div class="slide">
+                        <img src="images/brands_logo/vizio_logo.png" height="40" alt="" />
+                    </div>
+                </div>
+            </div>
+            <form class="form_section">
+                <input type="text" placeholder="For your original remote search your TV or remote number here...">
+                <button>Search</button>
+            </form>
+            <div class="desc_section">
+                <h2>We also have full function original universal TV remotes below for most popular brands!</h2>
+                <h1>No Programming, No Codes, It Just Works!</h1>
+                <p>Great if you do not know the exact TV remote you need</p>
+            </div>
             <div class="remotes_container">
                 <div class="remote_box">
-                    <img src="universal_images/ROKU.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Roku Full Function TV Remote Universal For All Roku TV's</p>
+                    <img src="images/universal_images/ROKU.jpg" alt="ROKU_remote">
+                    <div class="brand_logo"><img src="images/brands_logo/roku_logo.svg" alt=""></div>
                     <p class="price_text">$9.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Vizio.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Vizio Full Function TV Remote Universal For All Vizio TV's</p>
+                    <img src="images/universal_images/Vizio.jpg" alt="Vizio_remote">
+                    <div class="brand_logo"><img src="images/brands_logo/vizio_logo.png" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/LG.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original LG Full Function TV Remote Universal For All LG TV's</p>
+                    <img src="images/universal_images/LG.jpg" alt="lg_remote">
+                    <div class="brand_logo"><img class="lg_logo" src="images/brands_logo/lg_logo.jpg" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Samsung.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Samsung Full Function TV Remote Universal For All Samsung TV's</p>
+                    <img src="images/universal_images/Samsung.jpg" alt="samsung_remote">
+                    <div class="brand_logo"><img src="images/brands_logo/samsung_logo.svg" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Insignia.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Insignia Full Function TV Remote Universal For All Insignia TV's</p>
+                    <img src="images/universal_images/Insignia.jpg" alt="insignia_remote">
+                    <div class="brand_logo"><img class="insignia_logo" src="images/brands_logo/insignia_logo.png" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Toshiba.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Toshiba Full Function TV Remote Universal For All Toshiba TV's</p>
+                    <img src="images/universal_images/Toshiba.jpg" alt="toshiba_remote">
+                    <div class="brand_logo"><img src="images/brands_logo/toshiba_logo.svg" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Sony.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Sony Full Function TV Remote Universal For All Sony TV's</p>
+                    <img src="images/universal_images/Sony.jpg" alt="sony_remote">
+                    <div class="brand_logo"><img class="sony_logo" src="images/brands_logo/sony_logo.svg" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Sanyo.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Sanyo Full Function TV Remote Universal For All Sanyo TV's</p>
+                    <img src="images/universal_images/Sanyo.jpg" alt="sanyo_remote">
+                    <div class="brand_logo"><img src="images/brands_logo/sanyo_logo.png" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Dynex.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Dynex Full Function TV Remote Universal For All Dynex TV's</p>
+                    <img src="images/universal_images/Dynex.jpg" alt="dynex_remote">
+                    <div class="brand_logo"><img class="dynex_logo" src="images/brands_logo/dynex_logo.svg" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Emerson.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Emerson Full Function TV Remote Universal For All Emerson TV's</p>
+                    <img src="images/universal_images/Emerson.jpg" alt="emerson_remote">
+                    <div class="brand_logo"><img class="emerson_logo" src="images/brands_logo/emerson_logo.png" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Panasonic.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Panasonic Full Function TV Remote Universal For All Panasonic TV's</p>
+                    <img src="images/universal_images/Panasonic.jpg" alt="panasonic_remote">
+                    <div class="brand_logo"><img class="panasonic_logo" src="images/brands_logo/panasonic_logo.svg" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/Hisense.jpg" alt="ROKU_remote_image">
-                    <p class="desc_text">Original Hisense Full Function TV Remote Universal For All Hisense TV's</p>
+                    <img src="images/universal_images/Hisense.jpg" alt="hisense_remote">
+                    <div class="brand_logo"><img src="images/brands_logo/hisense_logo.svg" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
                 <div class="remote_box">
-                    <img src="universal_images/samsung-universal.png" alt="ROKU_remote_image">
-                    <p class="desc_text">Original FireTV Full Function TV Remote Universal For All Toshiba/Insignia FireTV's - Includes Voice Search</p>
+                    <img src="images/universal_images/samsung-universal.png" alt="ROKU_remote_image">
+                    <div class="brand_logo"><img src="images/brands_logo/samsung_logo.svg" alt=""></div>
                     <p class="price_text">$12.99</p>
                     <button>More Info</button>
                 </div>
             </div>
-            <div class="image_container">
-                <img src="universal_images/Sony.jpg" alt="">
+            <div class="safer_solution_section">
+                <h2>In healthcare or hosptality? check out our sister brand</h2>
+                <img src="images/safer_solution_banner.png" alt="safer_solution_banner">
             </div>
         </div>
-        <div class="slider">
-            <div class="slide-track">
-                <div class="slide">
-                    <img src="universal_images/hisense_logo.svg" height="40" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="universal_images/lg_logo.jpg" height="100" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="universal_images/panasonic_logo.svg" height="80" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="universal_images/roku_logo.svg" height="40" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="universal_images/samsung_logo.svg" height="40" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="universal_images/sanyo_logo.png" height="40" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="universal_images/toshiba_logo.svg" height="40" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="universal_images/vizio_logo.png" height="40" alt="" />
-                </div>
-            </div>
-        </div>    
     </div>
+    
+
+    <script src="script.js"></script>
 </body>
 </html>

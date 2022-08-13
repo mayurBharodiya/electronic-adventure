@@ -3,9 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: "Poppins", "Roboto";
+}
+
+ul {
+    list-style-type: none;
 }
 
 @mixin white-gradient {
@@ -17,55 +20,168 @@ $animationSpeed: 40s;
 // Animation
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+	100% { transform: translateX(calc(-250px * 11))}
 }
 
-
-h1 {
-    font-size: 58px;
-}
-h2 {
-    font-size: 28px;
-}
 
 .wrapper {
-    background-color: #fcfcfc;
-    // background-color: rgb(176, 176, 240);
-    max-width: 1440px;
-    // padding: 0px 50px;
-    .form_section {
-        width: 60%;
-        // background-color: tomato;
-        display: flex;
-        column-gap: 5px;
-        input {
-            flex: auto;
-            font-size: 18px;
-            padding: 8px 15px;
-        }
-        button {
-            min-width: 100px;
-            font-size: 18px;
-            padding: 8px 15px;
-            background-color: blue;
-            border: none;
-            outline: none;
-            color: white;
-            font-family: "Roboto";
-        }
-    }
-    .desc_section {
-        margin: 60px auto;
-    }
-    .remote_section {
-        // background-color: black;
-        display: flex;
+    max-width: 1642px;
+    width: 100%;
+    // background-color: rgb(236, 220, 220);
+    .navbar_container {
         position: relative;
-        padding: 0px 20px;
-        .remotes_container {
+        background-color: white;
+        height: 75px;
+        .navbar {
+            width: 100%;
+            // background-color: #999;
             padding: 0px 20px;
+            height: 75px;
+            color: white;
             display: flex;
-            flex-wrap: wrap ;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 17px;
+            .logo_container {
+                height: 100%;
+                img.primary-icon {
+                    height: 100%;
+                }
+            }
+            a {
+                color: #888;
+                text-decoration: none;
+                &:hover {
+                    color: rgb(30, 30, 157);
+                }
+            }
+            .nav_list {
+                li {
+                    display: inline-block;
+                    padding: 20px 10px;
+                    &:nth-last-child(1) a {
+                        color: #059fe5;
+                        &:hover {
+                            color: rgb(30, 30, 157);
+                        }
+                    }
+                }    
+            }
+            .menu_button {
+                display: none;
+                color: black;
+            }        
+        }
+    }
+    .main_container {
+        display: block;
+        padding: 0px 150px;
+        padding-top: 100px;
+        h1.slider_header_text {
+            text-align: center;
+            text-transform: capitalize;
+            font-family: "Poppins";
+            margin-bottom: 20px;
+        }
+        .slider {
+            background: white;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+            height: 100px;
+            margin: auto auto 100px;
+            overflow:hidden;
+            position: relative;
+            // width: 100%;
+            &::before, &::after {
+                @include white-gradient;
+                content: "";
+                height: 100px;
+                position: absolute;
+                width: 200px;
+                z-index: 2;
+            }
+            &::after {
+                right: 0;
+                top: 0;
+                transform: rotateZ(180deg);
+            }
+            &::before {
+                left: 0;
+                top: 0;
+            }
+            .slide-track {
+                animation: scroll $animationSpeed linear infinite;
+                display: flex;
+                width: calc(250px * 26);
+                user-select: none;                
+            }
+            .slide {
+                // background-color: green;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+                width: 250px;
+                // overflow: hidden;
+                margin: auto 20px;
+                img.dynex_logo {
+                    filter: brightness(0.2);
+                }
+                img.emerson_logo {
+                    filter: brightness(0.2);
+                    transform: scale(1);
+                    height: 100px;
+                }
+            }
+            .slide.insignia_slide {
+                margin: auto 100px;
+                img {
+                    height: 50%;
+                    filter: brightness(0.2);
+                }
+            } 
+            .slide.dynex_slide {
+                margin: auto 100px;
+            }
+        }
+        .form_section {
+            width: 70%;
+            // background-color: tomato;
+            display: flex;
+            column-gap: 5px;
+            margin: auto auto 50px;
+            input {
+                flex: auto;
+                font-size: 18px;
+                padding: 8px 15px;
+                border: 1px solid #95959a;
+                outline: none;
+            }
+            button {
+                min-width: 100px;
+                font-size: 18px;
+                padding: 8px 15px;
+                background-color: blue;
+                border: none;
+                outline: none;
+                font-family: "Roboto";
+                color: #e1e1f4;
+                text-shadow: 1px 1px 2px #6c6c73;
+                &:hover {
+                    background-color: #219ad1;
+                    color: #e2f1f8;
+                    text-shadow: 1px 1px 2px #494d4f;
+                }
+            }
+        }
+        .desc_section {
+            text-align: center;
+        }
+        .remotes_container {
+            margin: 100px auto;
+            // background-color: orangered;
+            // padding: 0px 20px;
+            display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             column-gap: 20px;
@@ -86,11 +202,33 @@ h2 {
                     height: 230px;
                     margin-bottom: 20px;
                 }
-                .desc_text {
-                    line-height: 18px;
+                .brand_logo {
+                    // background-color: #219ad1;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        height: 30px;
+                    }
+                    img.lg_logo {
+                        transform: scale(2);
+                    }
+                    img.insignia_logo {
+                        filter: brightness(0.2);
+                    }
+                    img.sony_logo {
+                        filter: brightness(0.4);
+                    }
+                    img.dynex_logo {
+                        filter: brightness(0.4);
+                    }
+                    img.emerson_logo {
+                        transform: scale(2);
+                    }
+                    img.panasonic_logo {
+                        transform: scale(2);
+                    }
                 }
                 .price_text {
-                    margin-top: 10px;
                     color: rgb(103, 103, 103);
                     font-family: "Poppins";
                 }
@@ -101,73 +239,74 @@ h2 {
                     cursor: pointer;
                     font-size: 16px;
                     padding: 8px 15px;
-                    color: white;
                     background-color: rgb(93, 93, 219);
+                    color: rgb(226, 226, 248);
                     border: none;
-                    outline: none; 
-                }
-                button:hover {
-                    background-color: skyblue;
-                    transition: all 0.4s;
+                    outline: none;
+                    text-shadow: 1px 1px 2px rgb(85, 85, 88);
+                    &:hover {
+                        background-color: rgb(53, 53, 186);
+                        transition: all 0.4s;
+                        // color: ;
+                    }
                 }
             }
         }
-        .image_container {
-            min-width: 180px;
-            height: 98vh;
-            // background-color: red;
-            position: sticky;
-            top: 0;
+        .safer_solution_section {
+            text-align: center;
             img {
-                height: 98vh;
+                margin: 30px auto;
+                width: 100%;
             }
         }
     }
-    .slider {
-        background: white;
-        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-        height: 100px;
-        margin: 100px auto;
-        overflow:hidden;
-        position: relative;
-        // width: 100%;
-        
-        &::before,
-        &::after {
-            @include white-gradient;
-            content: "";
-            height: 100px;
-            position: absolute;
-            width: 200px;
-            z-index: 2;
+}
+
+
+
+
+@media all and (max-width: 1224px) {
+    .wrapper {
+        .navbar_container.deactive {
+            height: 100vh;
         }
-        
-        &::after {
-            right: 0;
-            top: 0;
-            transform: rotateZ(180deg);
+        .navbar_container {
+            position: relative;
+            background-color: white;
+            height: 75px;
+            .navbar {
+                position: relative;
+                background-color: white;
+                width: 100%;
+                flex-direction: column;
+                height: 75px;
+                border-bottom: 1px solid #aaa;
+                padding: 0px;
+                z-index: 20 !important;
+                .menu_button {
+                    display: block;
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                }
+                .nav_list {
+                    display: none;
+                    width: 100%;
+                    li {
+                        display: block;
+                        text-align: center;
+                        margin: 5px auto;
+                        padding: 15px 0px;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .nav_list.active {
+                    display: block;
+                }
+            }
         }
-    
-        &::before {
-            left: 0;
-            top: 0;
-        }
-        
-        .slide-track {
-            animation: scroll $animationSpeed linear infinite;
-            display: flex;
-            width: calc(250px * 14);
-        }
-        
-        .slide {
-            // background-color: green;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100px;
-            width: 250px;
-            // overflow: hidden;
-            margin: auto 20px;
-        }
-    }    
+        .main_container.deactive {display: none;}
+    }
 }

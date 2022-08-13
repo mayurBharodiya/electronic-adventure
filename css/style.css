@@ -8,12 +8,16 @@ body {
   font-family: "Poppins", "Roboto";
 }
 
+ul {
+  list-style-type: none;
+}
+
 @-webkit-keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1750px);
+    transform: translateX(-2750px);
   }
 }
 
@@ -22,52 +26,162 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1750px);
+    transform: translateX(-2750px);
   }
 }
-h1 {
-  font-size: 58px;
-}
-
-h2 {
-  font-size: 28px;
-}
-
 .wrapper {
-  background-color: #fcfcfc;
-  max-width: 1440px;
+  max-width: 1642px;
+  width: 100%;
 }
-.wrapper .form_section {
-  width: 60%;
+.wrapper .navbar_container {
+  position: relative;
+  background-color: white;
+  height: 75px;
+}
+.wrapper .navbar_container .navbar {
+  width: 100%;
+  padding: 0px 20px;
+  height: 75px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+}
+.wrapper .navbar_container .navbar .logo_container {
+  height: 100%;
+}
+.wrapper .navbar_container .navbar .logo_container img.primary-icon {
+  height: 100%;
+}
+.wrapper .navbar_container .navbar a {
+  color: #888;
+  text-decoration: none;
+}
+.wrapper .navbar_container .navbar a:hover {
+  color: rgb(30, 30, 157);
+}
+.wrapper .navbar_container .navbar .nav_list li {
+  display: inline-block;
+  padding: 20px 10px;
+}
+.wrapper .navbar_container .navbar .nav_list li:nth-last-child(1) a {
+  color: #059fe5;
+}
+.wrapper .navbar_container .navbar .nav_list li:nth-last-child(1) a:hover {
+  color: rgb(30, 30, 157);
+}
+.wrapper .navbar_container .navbar .menu_button {
+  display: none;
+  color: black;
+}
+.wrapper .main_container {
+  display: block;
+  padding: 0px 150px;
+  padding-top: 100px;
+}
+.wrapper .main_container h1.slider_header_text {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Poppins";
+  margin-bottom: 20px;
+}
+.wrapper .main_container .slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto auto 100px;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper .main_container .slider::before, .wrapper .main_container .slider::after {
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.wrapper .main_container .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.wrapper .main_container .slider::before {
+  left: 0;
+  top: 0;
+}
+.wrapper .main_container .slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: 6500px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.wrapper .main_container .slider .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 250px;
+  margin: auto 20px;
+}
+.wrapper .main_container .slider .slide img.dynex_logo {
+  filter: brightness(0.2);
+}
+.wrapper .main_container .slider .slide img.emerson_logo {
+  filter: brightness(0.2);
+  transform: scale(1);
+  height: 100px;
+}
+.wrapper .main_container .slider .slide.insignia_slide {
+  margin: auto 100px;
+}
+.wrapper .main_container .slider .slide.insignia_slide img {
+  height: 50%;
+  filter: brightness(0.2);
+}
+.wrapper .main_container .slider .slide.dynex_slide {
+  margin: auto 100px;
+}
+.wrapper .main_container .form_section {
+  width: 70%;
   display: flex;
   -moz-column-gap: 5px;
        column-gap: 5px;
+  margin: auto auto 50px;
 }
-.wrapper .form_section input {
+.wrapper .main_container .form_section input {
   flex: auto;
   font-size: 18px;
   padding: 8px 15px;
+  border: 1px solid #95959a;
+  outline: none;
 }
-.wrapper .form_section button {
+.wrapper .main_container .form_section button {
   min-width: 100px;
   font-size: 18px;
   padding: 8px 15px;
   background-color: blue;
   border: none;
   outline: none;
-  color: white;
   font-family: "Roboto";
+  color: #e1e1f4;
+  text-shadow: 1px 1px 2px #6c6c73;
 }
-.wrapper .desc_section {
-  margin: 60px auto;
+.wrapper .main_container .form_section button:hover {
+  background-color: #219ad1;
+  color: #e2f1f8;
+  text-shadow: 1px 1px 2px #494d4f;
 }
-.wrapper .remote_section {
-  display: flex;
-  position: relative;
-  padding: 0px 20px;
+.wrapper .main_container .desc_section {
+  text-align: center;
 }
-.wrapper .remote_section .remotes_container {
-  padding: 0px 20px;
+.wrapper .main_container .remotes_container {
+  margin: 100px auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -76,7 +190,7 @@ h2 {
        column-gap: 20px;
   row-gap: 40px;
 }
-.wrapper .remote_section .remotes_container .remote_box {
+.wrapper .main_container .remotes_container .remote_box {
   background-color: white;
   border: 1px solid #afaaaa;
   border-radius: 8px;
@@ -88,80 +202,106 @@ h2 {
   font-family: "Poppins";
   color: grey;
 }
-.wrapper .remote_section .remotes_container .remote_box img {
+.wrapper .main_container .remotes_container .remote_box img {
   height: 230px;
   margin-bottom: 20px;
 }
-.wrapper .remote_section .remotes_container .remote_box .desc_text {
-  line-height: 18px;
+.wrapper .main_container .remotes_container .remote_box .brand_logo {
+  display: flex;
+  justify-content: center;
 }
-.wrapper .remote_section .remotes_container .remote_box .price_text {
-  margin-top: 10px;
+.wrapper .main_container .remotes_container .remote_box .brand_logo img {
+  height: 30px;
+}
+.wrapper .main_container .remotes_container .remote_box .brand_logo img.lg_logo {
+  transform: scale(2);
+}
+.wrapper .main_container .remotes_container .remote_box .brand_logo img.insignia_logo {
+  filter: brightness(0.2);
+}
+.wrapper .main_container .remotes_container .remote_box .brand_logo img.sony_logo {
+  filter: brightness(0.4);
+}
+.wrapper .main_container .remotes_container .remote_box .brand_logo img.dynex_logo {
+  filter: brightness(0.4);
+}
+.wrapper .main_container .remotes_container .remote_box .brand_logo img.emerson_logo {
+  transform: scale(2);
+}
+.wrapper .main_container .remotes_container .remote_box .brand_logo img.panasonic_logo {
+  transform: scale(2);
+}
+.wrapper .main_container .remotes_container .remote_box .price_text {
   color: rgb(103, 103, 103);
   font-family: "Poppins";
 }
-.wrapper .remote_section .remotes_container .remote_box button {
+.wrapper .main_container .remotes_container .remote_box button {
   margin-top: 10px;
   font-family: "Roboto";
   font-weight: bold;
   cursor: pointer;
   font-size: 16px;
   padding: 8px 15px;
-  color: white;
   background-color: rgb(93, 93, 219);
+  color: rgb(226, 226, 248);
   border: none;
   outline: none;
+  text-shadow: 1px 1px 2px rgb(85, 85, 88);
 }
-.wrapper .remote_section .remotes_container .remote_box button:hover {
-  background-color: skyblue;
+.wrapper .main_container .remotes_container .remote_box button:hover {
+  background-color: rgb(53, 53, 186);
   transition: all 0.4s;
 }
-.wrapper .remote_section .image_container {
-  min-width: 180px;
-  height: 98vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+.wrapper .main_container .safer_solution_section {
+  text-align: center;
 }
-.wrapper .remote_section .image_container img {
-  height: 98vh;
+.wrapper .main_container .safer_solution_section img {
+  margin: 30px auto;
+  width: 100%;
 }
-.wrapper .slider {
-  background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
-  margin: 100px auto;
-  overflow: hidden;
-  position: relative;
-}
-.wrapper .slider::before, .wrapper .slider::after {
-  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-.wrapper .slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-.wrapper .slider::before {
-  left: 0;
-  top: 0;
-}
-.wrapper .slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
-  display: flex;
-  width: 3500px;
-}
-.wrapper .slider .slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 250px;
-  margin: auto 20px;
+
+@media all and (max-width: 1224px) {
+  .wrapper .navbar_container.deactive {
+    height: 100vh;
+  }
+  .wrapper .navbar_container {
+    position: relative;
+    background-color: white;
+    height: 75px;
+  }
+  .wrapper .navbar_container .navbar {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    flex-direction: column;
+    height: 75px;
+    border-bottom: 1px solid #aaa;
+    padding: 0px;
+    z-index: 20 !important;
+  }
+  .wrapper .navbar_container .navbar .menu_button {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  .wrapper .navbar_container .navbar .nav_list {
+    display: none;
+    width: 100%;
+  }
+  .wrapper .navbar_container .navbar .nav_list li {
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+    padding: 15px 0px;
+  }
+  .wrapper .navbar_container .navbar .nav_list li:hover {
+    text-decoration: underline;
+  }
+  .wrapper .navbar_container .navbar .nav_list.active {
+    display: block;
+  }
+  .wrapper .main_container.deactive {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
