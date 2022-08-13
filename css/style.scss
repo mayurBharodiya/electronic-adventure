@@ -15,7 +15,7 @@ ul {
 	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
 
-$animationSpeed: 40s;
+$animationSpeed: 60s;
 
 // Animation
 @keyframes scroll {
@@ -27,6 +27,7 @@ $animationSpeed: 40s;
 .wrapper {
     max-width: 1642px;
     width: 100%;
+    margin: auto;
     // background-color: rgb(236, 220, 220);
     .navbar_container {
         position: relative;
