@@ -86,6 +86,7 @@ ul {
   text-transform: capitalize;
   font-family: "Poppins";
   margin-bottom: 20px;
+  color: #3182c0;
 }
 .wrapper .main_container .slider {
   background: white;
@@ -166,7 +167,7 @@ ul {
   min-width: 100px;
   font-size: 18px;
   padding: 8px 15px;
-  background-color: blue;
+  background-color: #3182c0;
   border: none;
   outline: none;
   font-family: "Roboto";
@@ -178,8 +179,37 @@ ul {
   color: #e2f1f8;
   text-shadow: 1px 1px 2px #494d4f;
 }
+.wrapper .main_container .shipment_policy_section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 60px;
+  margin: 60px auto;
+}
+.wrapper .main_container .shipment_policy_section .shipment_section, .wrapper .main_container .shipment_policy_section .policy_section {
+  flex: 1;
+  min-width: 350px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.wrapper .main_container .shipment_policy_section .shipment_section img {
+  height: 80px;
+}
+.wrapper .main_container .shipment_policy_section .policy_section img {
+  height: 120px;
+}
 .wrapper .main_container .desc_section {
   text-align: center;
+}
+.wrapper .main_container .desc_section span {
+  color: #3182c0;
 }
 .wrapper .main_container .remotes_container {
   margin: 100px auto;
@@ -199,7 +229,7 @@ ul {
   padding: 15px;
   margin: auto;
   text-align: center;
-  box-shadow: 1px 0px 15px #afaaaa;
+  box-shadow: 3px 3px 13px 0px #afaaaa;
   font-family: "Poppins";
   color: grey;
 }
@@ -232,6 +262,9 @@ ul {
 .wrapper .main_container .remotes_container .remote_box .brand_logo img.panasonic_logo {
   transform: scale(2);
 }
+.wrapper .main_container .remotes_container .remote_box .universal_remote {
+  margin-bottom: 5px;
+}
 .wrapper .main_container .remotes_container .remote_box .price_text {
   color: rgb(103, 103, 103);
   font-family: "Poppins";
@@ -243,7 +276,7 @@ ul {
   cursor: pointer;
   font-size: 16px;
   padding: 8px 15px;
-  background-color: rgb(93, 93, 219);
+  background-color: #3182c0;
   color: rgb(226, 226, 248);
   border: none;
   outline: none;
@@ -256,12 +289,15 @@ ul {
 .wrapper .main_container .safer_solution_section {
   text-align: center;
 }
+.wrapper .main_container .safer_solution_section h2 {
+  text-transform: capitalize;
+}
 .wrapper .main_container .safer_solution_section img {
   margin: 30px auto;
   width: 100%;
 }
 
-@media all and (max-width: 1224px) {
+@media all and (max-width: 1368px) {
   .wrapper .navbar_container.deactive {
     height: 100vh;
   }
@@ -293,7 +329,6 @@ ul {
   .wrapper .navbar_container .navbar .nav_list li {
     display: block;
     text-align: center;
-    margin: 5px auto;
     padding: 15px 0px;
   }
   .wrapper .navbar_container .navbar .nav_list li:hover {

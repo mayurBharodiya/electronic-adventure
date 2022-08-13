@@ -83,6 +83,7 @@ $animationSpeed: 60s;
             text-transform: capitalize;
             font-family: "Poppins";
             margin-bottom: 20px;
+            color: #3182c0;
         }
         .slider {
             background: white;
@@ -161,7 +162,7 @@ $animationSpeed: 60s;
                 min-width: 100px;
                 font-size: 18px;
                 padding: 8px 15px;
-                background-color: blue;
+                background-color: #3182c0;
                 border: none;
                 outline: none;
                 font-family: "Roboto";
@@ -174,8 +175,42 @@ $animationSpeed: 60s;
                 }
             }
         }
+        .shipment_policy_section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            column-gap: 30px;
+            row-gap: 60px;
+            // height: 200px;
+            margin: 60px auto;
+            // background-color: orange;
+            .shipment_section, .policy_section {
+                // background-color: green;
+                flex: 1;
+                min-width: 350px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 10px;
+            }
+            .shipment_section {
+                img {
+                    height: 80px;
+                }
+            }
+            .policy_section {
+                img {
+                    height: 120px;
+                }
+            }
+        }
         .desc_section {
             text-align: center;
+            span {
+                color: #3182c0;
+            }
         }
         .remotes_container {
             margin: 100px auto;
@@ -196,7 +231,7 @@ $animationSpeed: 60s;
                 padding: 15px;
                 margin: auto;
                 text-align: center;
-                box-shadow: 1px 0px 15px #afaaaa;
+                box-shadow: 3px 3px 13px 0px #afaaaa;
                 font-family: "Poppins";
                 color: grey;
                 img {
@@ -229,6 +264,9 @@ $animationSpeed: 60s;
                         transform: scale(2);
                     }
                 }
+                .universal_remote {
+                    margin-bottom: 5px;
+                }
                 .price_text {
                     color: rgb(103, 103, 103);
                     font-family: "Poppins";
@@ -240,7 +278,7 @@ $animationSpeed: 60s;
                     cursor: pointer;
                     font-size: 16px;
                     padding: 8px 15px;
-                    background-color: rgb(93, 93, 219);
+                    background-color: #3182c0;
                     color: rgb(226, 226, 248);
                     border: none;
                     outline: none;
@@ -255,6 +293,7 @@ $animationSpeed: 60s;
         }
         .safer_solution_section {
             text-align: center;
+            h2 {text-transform: capitalize;}
             img {
                 margin: 30px auto;
                 width: 100%;
@@ -266,7 +305,7 @@ $animationSpeed: 60s;
 
 
 
-@media all and (max-width: 1224px) {
+@media all and (max-width: 1368px) {
     .wrapper {
         .navbar_container.deactive {
             height: 100vh;
@@ -296,7 +335,7 @@ $animationSpeed: 60s;
                     li {
                         display: block;
                         text-align: center;
-                        margin: 5px auto;
+                        // margin: 5px auto;
                         padding: 15px 0px;
                         &:hover {
                             text-decoration: underline;
