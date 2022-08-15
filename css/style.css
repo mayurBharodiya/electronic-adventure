@@ -357,7 +357,7 @@ ul {
 
 @media all and (max-width: 1024px) {
   .wrapper .main_container {
-    padding: 0px;
+    padding: 0px 10px;
   }
 }
 @media all and (max-width: 1368px) {

@@ -11,9 +11,6 @@ ul {
     list-style-type: none;
 }
 
-@mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-}
 
 $animationSpeed: 10s;
 
@@ -361,7 +358,7 @@ $animationSpeed: 10s;
 
 @media all and (max-width: 1024px) {
     .wrapper {
-        .main_container {padding: 0px;}
+        .main_container {padding: 0px 10px;}
     }
 }
 
