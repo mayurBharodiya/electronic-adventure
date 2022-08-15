@@ -18,12 +18,7 @@ ul {
 $animationSpeed: 10s;
 
 // Animation
-@keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 11))}
-}
-
-@keyframes marquee {
+@keyframes scrollAnim {
     0% { left: 0; }
     100% { left: -100%; }
   }
@@ -93,11 +88,14 @@ $animationSpeed: 10s;
             margin: auto;
             overflow: hidden;
             margin-bottom: 100px;
+            box-shadow: 1px 1px 10px 0px #888;
             .slider_section {
                 height: 200px;
                 height: 120px;
                 width: 3440px;
                 border: 1px solid #eee;
+                // border-top: 1px solid rgb(190, 184, 184);
+                // border-bottom: 1px solid rgb(190, 184, 184);
                 overflow: hidden;
                 box-sizing: border-box;
                 position: relative;
@@ -111,7 +109,7 @@ $animationSpeed: 10s;
                     display: block;
                     width: 200%;
                     position: absolute;
-                    animation: marquee 40s linear infinite;
+                    animation: scrollAnim 100s linear infinite;
                     &:hover {
                         animation-play-state: paused;
                     }
