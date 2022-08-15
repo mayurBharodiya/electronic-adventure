@@ -339,9 +339,9 @@ $animationSpeed: 10s;
                     outline: none;
                     text-shadow: 1px 1px 2px rgb(85, 85, 88);
                     &:hover {
-                        background-color: rgb(53, 53, 186);
-                        transition: all 0.4s;
-                        // color: ;
+                        background-color: #219ad1;
+                        color: #e2f1f8;
+                        text-shadow: 1px 1px 2px #494d4f;
                     }
                 }
             }
@@ -359,6 +359,11 @@ $animationSpeed: 10s;
 
 
 
+@media all and (max-width: 1024px) {
+    .wrapper {
+        .main_container {padding: 0px;}
+    }
+}
 
 @media all and (max-width: 1368px) {
     .wrapper {
