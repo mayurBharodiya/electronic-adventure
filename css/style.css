@@ -286,9 +286,13 @@ ul {
   padding: 15px;
   margin: auto;
   text-align: center;
-  box-shadow: 3px 3px 13px 0px #afaaaa;
+  box-shadow: 3px 3px 17px 0px #afaaaa;
   font-family: "Poppins";
   color: grey;
+  transition: box-shadow 0.4s;
+}
+.wrapper .main_container .remotes_container .remote_box:hover {
+  box-shadow: 2px 2px 7px 0px #afaaaa;
 }
 .wrapper .main_container .remotes_container .remote_box img {
   height: 230px;
