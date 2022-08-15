@@ -96,6 +96,10 @@ ul {
   box-shadow: 1px 1px 10px 0px #888;
 }
 .wrapper .main_container .slider_container .slider_section {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   height: 200px;
   height: 120px;
   width: 3440px;

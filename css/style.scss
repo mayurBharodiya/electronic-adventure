@@ -90,6 +90,7 @@ $animationSpeed: 10s;
             margin-bottom: 100px;
             box-shadow: 1px 1px 10px 0px #888;
             .slider_section {
+                user-select: none;
                 height: 200px;
                 height: 120px;
                 width: 3440px;
