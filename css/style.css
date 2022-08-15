@@ -104,35 +104,39 @@ ul {
   margin-bottom: 20px;
   color: #3182c0;
 }
-.wrapper .main_container .slider_section {
+.wrapper .main_container .slider_container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+.wrapper .main_container .slider_container .slider_section {
   height: 200px;
   height: 120px;
   width: 3440px;
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
-  margin: 100px auto;
   display: flex;
   align-items: center;
 }
-.wrapper .main_container .slider_section span {
+.wrapper .main_container .slider_container .slider_section span {
   float: left;
   width: 50%;
 }
-.wrapper .main_container .slider_section .slider--inner {
-  /* background-color: orange; */
+.wrapper .main_container .slider_container .slider_section .slider--inner {
   display: block;
   width: 200%;
   position: absolute;
   -webkit-animation: marquee 40s linear infinite;
           animation: marquee 40s linear infinite;
 }
-.wrapper .main_container .slider_section .slider--inner:hover {
+.wrapper .main_container .slider_container .slider_section .slider--inner:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv {
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv {
   width: 250px;
   height: 100px;
   display: inline-block;
@@ -140,141 +144,78 @@ ul {
   transition: all 0.2s ease-out;
   position: relative;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.hisense {
-  /* background-color: purple; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv:hover {
+  transform: scale(1.2);
+  opacity: 0.5;
+  cursor: pointer;
+}
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.hisense {
   background-image: url("../images/brands_logo/hisense_logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.lg {
-  /* background-color: blue; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.lg {
   background-image: url("../images/brands_logo/lg_logo.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.panasonic {
-  /* background-color: skyblue; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.panasonic {
   background-image: url("../images/brands_logo/panasonic_logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.roku {
-  /* background-color: green; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.roku {
   background-image: url("../images/brands_logo/roku_logo.svg");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.samsung {
-  /* background-color: yellow; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.samsung {
   background-image: url("../images/brands_logo/samsung_logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.sanyo {
-  /* background-color: orange; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.sanyo {
   background-image: url("../images/brands_logo/sanyo_logo.png");
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.toshiba {
-  /* background-color: orangered; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.toshiba {
   background-image: url("../images/brands_logo/toshiba_logo.svg");
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.vizio {
-  /* background-color: red; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.vizio {
   background-image: url("../images/brands_logo/vizio_logo.png");
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.dynex {
-  /* background-color: yellowgreen; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.dynex {
   background-image: linear-gradient(white, white), url("../images/brands_logo/dynex_logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: difference;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.emerson {
-  /* background-color: teal; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.emerson {
   background-image: url("../images/brands_logo/emerson_logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-.wrapper .main_container .slider_section .slider--inner span .imgdiv.insignia {
-  /* background-color: lightcoral; */
+.wrapper .main_container .slider_container .slider_section .slider--inner span .imgdiv.insignia {
   background-image: linear-gradient(white, white), url("../images/brands_logo/Insignia_logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: difference;
-}
-.wrapper .main_container .marquee {
-  height: 200px;
-  /* width: 800px; */
-  width: 400px;
-  border: 2px solid #eee;
-  overflow: hidden;
-  box-sizing: border-box;
-  position: relative;
-  margin: 100px auto;
-  background-color: rgb(90, 90, 6);
-}
-.wrapper .main_container .marquee .marquee--inner {
-  background-color: rgb(126, 8, 8);
-  display: block;
-  width: 210%;
-  margin: 70px 0;
-  position: absolute;
-  -webkit-animation: marquee 20s linear infinite;
-          animation: marquee 20s linear infinite;
-}
-.wrapper .main_container .marquee .marquee--inner:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-.wrapper .main_container .marquee .marquee--inner .orb {
-  width: 50px;
-  height: 50px;
-  background: #999;
-  border-radius: 50px;
-  display: inline-block;
-  margin: 0 24.7px;
-  /* float: left; */
-  transition: all 0.2s ease-out;
-}
-.wrapper .main_container .marquee .marquee--inner .orb:hover {
-  transform: scale(1.2);
-  opacity: 0.5;
-  cursor: pointer;
-}
-.wrapper .main_container .marquee .marquee--inner .red {
-  background: red;
-}
-.wrapper .main_container .marquee .marquee--inner .yellow {
-  background: yellow;
-}
-.wrapper .main_container .marquee .marquee--inner .blue {
-  background: blue;
-}
-.wrapper .main_container .marquee .marquee--inner .orange {
-  background: orange;
-}
-.wrapper .main_container .marquee .marquee--inner .purple {
-  background: purple;
-}
-.wrapper .main_container .marquee .marquee--inner .green {
-  background: green;
 }
 .wrapper .main_container .form_section {
   width: 70%;
