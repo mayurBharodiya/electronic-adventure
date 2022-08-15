@@ -248,7 +248,7 @@ ul {
 }
 .wrapper .main_container .shipment_policy_section .shipment_section, .wrapper .main_container .shipment_policy_section .policy_section {
   flex: 1;
-  min-width: 350px;
+  min-width: 392px;
   height: 100%;
   display: flex;
   align-items: center;
