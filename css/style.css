@@ -249,13 +249,24 @@ ul {
 }
 .wrapper .main_container .shipment_policy_section .shipment_section, .wrapper .main_container .shipment_policy_section .policy_section, .wrapper .main_container .shipment_policy_section .less_expernsive_section {
   flex: 1;
+  min-height: 180px;
   min-width: 392px;
+  max-width: 550px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 7px;
+  padding: 20px;
+  box-shadow: 1px 1px 10px darkgrey;
+}
+.wrapper .main_container .shipment_policy_section .shipment_section p, .wrapper .main_container .shipment_policy_section .policy_section p, .wrapper .main_container .shipment_policy_section .less_expernsive_section p {
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-bottom: 7px;
 }
 .wrapper .main_container .shipment_policy_section .shipment_section img {
   height: 80px;
@@ -363,9 +374,31 @@ ul {
   width: 100%;
 }
 
+@media all and (max-width: 448px) {
+  .wrapper .main_container .form_section {
+    width: 100%;
+    flex-direction: column;
+  }
+  .wrapper .main_container .form_section input {
+    width: 100%;
+  }
+  .wrapper .main_container .shipment_policy_section {
+    box-sizing: border-box;
+  }
+  .wrapper .main_container .shipment_policy_section .shipment_section, .wrapper .main_container .shipment_policy_section .policy_section, .wrapper .main_container .shipment_policy_section .less_expernsive_section {
+    min-height: 280px;
+    max-height: 400px;
+    min-width: 200px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .wrapper .main_container .shipment_policy_section .shipment_section img, .wrapper .main_container .shipment_policy_section .policy_section img, .wrapper .main_container .shipment_policy_section .less_expernsive_section img {
+    margin-bottom: 20px;
+  }
+}
 @media all and (max-width: 1024px) {
   .wrapper .main_container {
-    padding: 0px 10px;
+    padding: 80px 10px;
   }
 }
 @media all and (max-width: 1368px) {

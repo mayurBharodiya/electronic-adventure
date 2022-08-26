@@ -241,12 +241,24 @@ $animationSpeed: 10s;
             .shipment_section, .policy_section, .less_expernsive_section {
                 // background-color: green;
                 flex: 1;
+                min-height: 180px;
                 min-width: 392px;
+                max-width: 550px;
                 height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 column-gap: 10px;
+
+                border: 1px solid lightgrey;
+                border-radius: 7px;
+                padding: 20px;
+                box-shadow: 1px 1px 10px darkgrey;
+                p {
+                    font-weight: 400;
+                    font-size: 1.2em;
+                    margin-bottom: 7px;
+                }
             }
             .shipment_section {
                 img {
@@ -366,9 +378,38 @@ $animationSpeed: 10s;
 
 
 
+@media all and (max-width: 448px) {
+    .wrapper {
+        .main_container {
+            // padding: 80px 10px;
+            .form_section {
+                width: 100%;
+                flex-direction: column;
+                input {
+                    width: 100%;
+                }
+            }
+            .shipment_policy_section {
+                // background-color: red;
+                box-sizing: border-box;
+                .shipment_section, .policy_section, .less_expernsive_section {
+                    img {
+                        margin-bottom: 20px;
+                    }
+                    min-height: 280px;
+                    max-height: 400px;
+                    min-width: 200px;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 @media all and (max-width: 1024px) {
     .wrapper {
-        .main_container {padding: 0px 10px;}
+        .main_container {padding: 80px 10px;}
     }
 }
 
@@ -413,7 +454,7 @@ $animationSpeed: 10s;
                     display: block;
                 }
             }
-        }
+        }        
         .main_container.deactive {display: none;}
     }
 }
