@@ -237,7 +237,7 @@ $animationSpeed: 10s;
             // height: 200px;
             margin: 60px auto;
             // background-color: orange;
-            .shipment_section, .policy_section {
+            .shipment_section, .policy_section, .less_expernsive_section {
                 // background-color: green;
                 flex: 1;
                 min-width: 392px;
@@ -250,6 +250,11 @@ $animationSpeed: 10s;
             .shipment_section {
                 img {
                     height: 80px;
+                }
+            }
+            .less_expernsive_section {
+                img {
+                    height: 120px;
                 }
             }
             .policy_section {

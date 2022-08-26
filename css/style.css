@@ -246,7 +246,7 @@ ul {
   row-gap: 60px;
   margin: 60px auto;
 }
-.wrapper .main_container .shipment_policy_section .shipment_section, .wrapper .main_container .shipment_policy_section .policy_section {
+.wrapper .main_container .shipment_policy_section .shipment_section, .wrapper .main_container .shipment_policy_section .policy_section, .wrapper .main_container .shipment_policy_section .less_expernsive_section {
   flex: 1;
   min-width: 392px;
   height: 100%;
@@ -258,6 +258,9 @@ ul {
 }
 .wrapper .main_container .shipment_policy_section .shipment_section img {
   height: 80px;
+}
+.wrapper .main_container .shipment_policy_section .less_expernsive_section img {
+  height: 120px;
 }
 .wrapper .main_container .shipment_policy_section .policy_section img {
   height: 120px;
